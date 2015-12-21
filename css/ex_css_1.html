@@ -7,13 +7,26 @@
             /* h1을 빨강색으로 visaul code 같은경우.. 색깔이 출력되네..
             h1    : 선택자, 
             {...} : 서술
+            괄호안의 덩어리 하나하나를 속성이라고 부름.
+            속성과 속성을 구분하는 구분자 -> ;                        
             */
-            h1 {color:red}
+            h1, h2 {
+                color:red; 
+                font-size:10px
+            }
+            h2{
+                text-decoration: underline;
+            }
+            header h1 {
+                border:1px solid red;
+            }
         </style>
         <!-- CSS 끝 -->
     </head>
     <body>
-        <h1>CSS</h1>
+        <header>
+            <h1>CSS</h1>
+        </header>
         <h2>JavaScript</h2>
         <h3>HTML</h3>        
         <h1>PHP</h1>
