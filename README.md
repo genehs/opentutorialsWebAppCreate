@@ -604,3 +604,5 @@ function_name();
 </pre>
 
 JavaScript 나 PHP 나 거의 똑같음..
+
+아는 만큼 보인다.
