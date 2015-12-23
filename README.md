@@ -505,9 +505,15 @@ true, false 를 Boolean 이라고함(블리언)
 자바스크립트, PHP 아래와 같음.(동일)
 
 <code>
+
 if(true/false) {
+    
     // true 인 경우 여기 실행.
+
 }else {
+
     // false 인 경우 여기 실행.
+
 }
+
 </code>
