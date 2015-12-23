@@ -576,3 +576,31 @@ $list[0];
 ## 배열과 반복문
 
 배열과 반복문은 바늘과 실 같은 존재.
+
+## 함수
+
+수학시간에 배우죠..
+
+함수는 굉장히 중요한 도구다..
+
+프로그래밍을 하면 수학을 좀더 구체적인 느낌으로 배울 수 있다..
+
+우리는 수학을 못하는 사람이 아니고 잘할 사람들이다??
+
+수학시간의 함수랑 느낌은 다르지만 본질은 같을 것이다..
+
+<pre>
+// JavaScript
+function function_name() {
+}
+
+function_name();
+
+// PHP
+function function_name() {
+}
+
+function_name();
+</pre>
+
+JavaScript 나 PHP 나 거의 똑같음..
