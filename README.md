@@ -504,7 +504,7 @@ true, false 를 Boolean 이라고함(블리언)
 
 자바스크립트, PHP 아래와 같음.(동일)
 
-<code>
+<pre>
 
 if(true/false) {
     
@@ -516,4 +516,4 @@ if(true/false) {
 
 }
 
-</code>
+</pre>
