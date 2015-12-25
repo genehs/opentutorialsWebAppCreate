@@ -763,3 +763,23 @@ MySQLClient(Client) 와 MySQLServer(Server) 가 깔려있다고 생각해보자.
 ex) 클라이언트 컴퓨터에서 SELECT * FROM topic( SQL ) 을 실행하면 이 명령에 해당하는 정보를 서버 컴퓨터가 클라이언트에게 표로 된 정보를 응답 해줌. 
 
 PHP가 클라이언트라고 할수 있고 MySQL은 서버라고 할수도 있음.(PHP에서 MySql을 사용하면..)
+
+MySQL monitor 을 사용할 예정(mysql 클라이언트)
+
+MySQL monitor = 기분 프로그램(표준적인 mysql 클라이언트) - 사용하기 어렵다..
+
+그런 이유 때문에 GUI 환경에서 데이터베이스 서버에 접속해서 작업할수 잇는 다양한 툴들이 존재함.(하지만 그런 툴들은 구매를 하거나 설치를 해야 됨.)
+
+기본은 MySQL monitor 이다. (교육적인 가치가 높음) 모든 MySQL에 기본적으로 탑재 되있음.
+
+운영체제별 실행 방법이 다름.
+
+윈도우
+
+윈도우 키 누르고 알파벳 r을 누르면 실행 창이 뜨고 cmd 누르고 확인.
+
+mysql위치로 이동. = cd C:\Bitnami\wampstack-5.5.30-0\mysql\bin
+
+mysql -hlocalhost -uroot -p 하고 비밀번호 입력하면 접속됨. 로컬호스트는 같은 컴퓨터라서 로컬호스트라고 한것..
+
+만약에 다른 컴퓨터로 접속할려면 로컬호스트 대신 그 웹의 주소를 적어야됨..
