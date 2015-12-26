@@ -856,3 +856,60 @@ form 사용.
 사용자가 웹을 통해서 정보를 작성할수 있는가.
 
 데이터를 추가하는 방법. 사용자가 데이터베이스를 직접 조작할 필요가 없도록.
+
+## 관계형 데이터 베이스 이론
+
+중요한 내용은 다 배운 상태.
+
+좀더 웹에 실제로 적용 되는 모습을 보고 싶을때..
+
+**관계형 데이터베이스의 종류**
+
+* MySQL
+* MSSQL
+* ORACLE
+
+관계형 데이터베이스가 주류.
+
+Relational database 중복을 테이블에서 몰아내는 방법?
+
+**topic 테이블**
+
+id | title                   | author
+---|-------------------------|-----------------
+1  | About JavaScript        | 1
+2  | Variable and Constant   | 3
+3  | Operator                | 1
+4  | Conditional             | 2
+5  | function                | 2
+6  | Object                  | 3
+
+이것과
+
+**user 테이블**
+
+id | name
+---|-----------
+1  | egoing
+2  | jin
+3  | k8805
+4  | sorialgi
+5  | lily
+6  | happydeveloper
+
+의 결합
+
+title                   | name
+------------------------|-----------------
+About JavaScript        | egoing
+Variable and Constant   | k8805
+Operator                | egoing
+Conditional             | jin
+function                | jin
+Object                  | k8805
+
+SELECT title, name FROM topic LEFT JOIN user ON topic.author = user.id
+
+왼쪽 오른쪽에서 왼쪽을 기준으로 테이블을 결합해라.. LEFT JOIN
+
+가상의 테이블.. 논리적인 테이블... 두개의 독립된 테이블이 존재하지만 조인과 같은 연산자를 통해서 두개의 테이블이 긴밀하게 관계를 맺고 있어서.. 관계형 데이터베이스다 라고 한다.
