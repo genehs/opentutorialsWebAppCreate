@@ -783,3 +783,49 @@ mysql위치로 이동. = cd C:\Bitnami\wampstack-5.5.30-0\mysql\bin
 mysql -hlocalhost -uroot -p 하고 비밀번호 입력하면 접속됨. 로컬호스트는 같은 컴퓨터라서 로컬호스트라고 한것..
 
 만약에 다른 컴퓨터로 접속할려면 로컬호스트 대신 그 웹의 주소를 적어야됨..
+
+테이블이라는 것은 일종의 파일이라고 할 수 있음.
+
+데이터베이스는 테이블을 묶어주는 일종의 디렉토리 같은 역할을 함.
+
+워드프레스나 제로보드, 익스프레스 엔진등.. 이런 웹 애플리케이션 하나가 데이터베이스 하나를 가지고 있다라는 감각정도만 알면 됨. 
+
+**데이터베이스 보기**
+
+show databases;
+
+**생성시**
+
+CREATE DATABASE opentutorials CHARACTER SET ut8 COLLATE utf8_general_ci;
+
+**데이터베이스 사용**
+
+use opentutorials;
+
+**테이블 생성**
+
+CREATE TABLE `topic` (
+`id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(100) NOT NULL,
+  `description` text NOT NULL,
+  `author` varchar(30) NOT NULL,
+  `created` datetime NOT NULL,
+  PRIMARY KEY (id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+** 테이블 보기 **
+
+SHOW tables;
+
+
+데이터베이스를 쓰는 이유 = 엄격함
+
+** 정보 추가 **
+
+INSERT INTO `topic` (title, description, authour, created) VALUES ('about javascript', 'javascript is ~', 'egoing', '2015-12-26 13:03:5');
+
+** 정보 가져오기 **
+
+mysql> select * from topic;
+
+우리는 SQL 문을 실제로 잘 숙지 해야됨..
