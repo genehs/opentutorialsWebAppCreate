@@ -1,7 +1,7 @@
 <?php 
     $conn = mysqli_connect('localhost', 'root', '123456');
     mysqli_select_db($conn, 'opentutorials');
-    $result = mysqli_query($conn, 'SELECT * FROM topic');
+    $result = mysqli_query($conn, 'SELECT * FROM topic');  
 ?>
 <!DOCTYPE html>
 <html>
@@ -16,8 +16,11 @@
         </header>
         <nav>
             <ol>
-                <?php
-                echo file_get_contents('list.txt'); 
+                <?php     
+                // 연관배열 데이터 형식으로 데이터를 가져옴.
+                while($row = mysqli_fetch_assoc($result)) {
+                    echo '<li><a href="http://localhost:8000/index.php?id='.$row['id'].'">'.$row['title'].'</a></li>'."\n";
+                }
                 ?>
             </ol>
         </nav>
