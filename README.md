@@ -829,3 +829,22 @@ INSERT INTO `topic` (title, description, authour, created) VALUES ('about javasc
 mysql> select * from topic;
 
 우리는 SQL 문을 실제로 잘 숙지 해야됨..
+
+## MySQL 실습
+
+데이터를 파일에 저장되는 것을 개선해서 MySQL의 데이터베이스로 교체하는 작업.
+
+동작하는 방법에는 차이가 없지만, 내부적으로 차이가 있음(데이터베이스 저장)
+
+PHP라고 하는 것은.. 파일에서 데이터를 저장하고 읽고 하는 것에서 데이터베이스로 변경.(중계자와ㅏ 같은 역할)
+
+그런 맥락에서 PHP 어플리케이션을 **미들웨어**라고 부름.
+
+PHP에서 **mysqli**라는 PHP 에 내장되있는 것을 사용하자.
+
+        | MySQL monitor                                   | mysqli
+--------|-------------------------------------------------|-----------------
+서버접속 | mysql -hlocalhost -urrot -p11111;               | $conn = mysqli_connect('localhost', 'root', '11111');
+DB선택   | use opentutorials;                              | mysqli_select_db($conn, 'opentutorials');
+조회     |                                                 | 
+출력     |
