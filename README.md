@@ -959,3 +959,11 @@ INSERT INTO `user` VALUES ('3', 'k8805', '333333');
 INSERT INTO `user` VALUES ('4', 'sorialgi', '444444');
 INSERT INTO `user` VALUES ('5', 'lily', '555555');
 INSERT INTO `user` VALUES ('6', 'happydeveloper', '666666');
+
+**데이터 삽입**
+
+하나의 topic 테이블에서 user 테이블을 분리했음.
+
+데이터베이스를 추가할때 문제가 생김.
+
+user 테이블에서 name에 해당되는 id를 찾아서 변경하고 topic 에 추가.. 없으면 만듬.
