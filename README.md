@@ -850,3 +850,7 @@ DB선택   | use opentutorials;                              | mysqli_select_db(
 출력     | 표 형태로  출력                                  | $row = mysqli_fetch_assoc($result); $row\['title'\];
 
 연관배열(associative array)
+
+form 사용.
+
+사용자가 웹을 통해서 정보를 작성할수 있는가.
