@@ -846,5 +846,5 @@ PHP에서 **mysqli**라는 PHP 에 내장되있는 것을 사용하자.
 --------|-------------------------------------------------|-----------------
 서버접속 | mysql -hlocalhost -urrot -p11111;               | $conn = mysqli_connect('localhost', 'root', '11111');
 DB선택   | use opentutorials;                              | mysqli_select_db($conn, 'opentutorials');
-조회     |                                                 | 
-출력     |
+조회     | SELECT * FROM topic;                           | $result = mysqli_query($conn, 'SELECT * FROM topic');
+출력     | 표 형태로  출력                                  | $row = mysqli_fetch_assoc($result); $row\['title'\];
