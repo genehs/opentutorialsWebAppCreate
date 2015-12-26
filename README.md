@@ -997,3 +997,9 @@ php 함수 : htmlspecialchars html 그대로 출력
 php 함수 : strip_tags 태그 사용..
 
 이런 것들을 이스케이핑 이라고 함... html 코드를 해석하는 것으로 부터 대피시킨다.. 굉장히 중요한 기법..
+
+로그인 기능에서 보안하기..
+
+SQL 문에서 WHERE 에서 1=1 이다 이런식으로 하면 모든 행이 참이 되버림..
+
+mysqli_real_escape_string 이런것들도 이스케이핑 이라고 할 수 있음.
