@@ -24,7 +24,7 @@
             </header>
             <div class="row">
                 <nav class="col-md-3">
-                    <ol>
+                    <ol class="nav nav-pills nav-stacked">
                         <?php     
                         // 연관배열 데이터 형식으로 데이터를 가져옴.
                         while($row = mysqli_fetch_assoc($result)) {
@@ -34,11 +34,6 @@
                     </ol>
                 </nav>
                 <div class="col-md-9">
-                    <div id="control">        
-                        <input type="button" value="white" onclick="document.getElementById('target').className = 'white'"/>
-                        <input type="button" value="black" onclick="document.getElementById('target').className = 'black'"/> 
-                        <a href="http://localhost:8000/write.php">쓰기</a>    
-                    </div>
                     <article>
                         <?php 
                         if(empty($_GET['id']) === false) {
@@ -51,6 +46,14 @@
                         }
                         ?>
                     </article>
+                    <hr>
+                    <div id="control"> 
+                        <div class="btn-group" role="group" aria-label="...">       
+                            <input type="button" value="white" onclick="document.getElementById('target').className = 'white'" class="btn btn-default btn-lg"/>
+                            <input type="button" value="black" onclick="document.getElementById('target').className = 'black'" class="btn btn-default btn-lg"/> 
+                        </div>
+                        <a href="http://localhost:8000/write.php" class="btn btn-success btn-lg">쓰기</a>    
+                    </div>
                 </div>
             </div>
         </div>
