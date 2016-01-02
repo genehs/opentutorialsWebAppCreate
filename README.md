@@ -1247,3 +1247,40 @@ IP고갈 대책 3
 단점 = 직접 운영해야 합니다.(서비스를 직접 운영해야되는것 결코 만만하지 않다.)
 
 서버호스팅은 장비라던지 그런 것들에 대해서는 업체들이 대행해준다.
+
+### 클라우드 컴퓨팅(Cloud Computing)
+
+자신이 직접 인프라를 운영하지 않고 다른 사업자가 제공하는 것을 사용할때.
+
+개념의 함정. 클라우드의 말이 너무 유행이 되서 아무데서나 쓰이므로 개념의 구분이 없어짐.
+
+인프라의 질적/양적 발전.클라우드도 일종의 호스팅 가상화, 종량제
+
+가상머신이란? 물리적인 컴퓨터는 아니지만 물리적인 컴퓨터 처럼 작동한다.
+
+COMPUTER(물리적기계) - 운영체제 - 가상머신(소프트웨어로 만든 기계) - 운영체제 여러개
+
+물리적인 기계는 하나지만 그 위체 여러게의 운영체제를 설치하는 기술..
+
+데스크탑에서의 가상머신
+* VMWare
+* VirtualBox
+* Parallels
+
+Server쪽에서 가상화 기술이 어떻게 사용되는가? A라는 업체는 엄청난 양을 컴퓨터를 구매함. 여러분들은 A라는 업체에서 저렴한 컴퓨터를 구매할수있음.
+
+그리고 여러개의 컴퓨터를 묶어서 강력한 컴퓨터를 사용할수있음. 종량제와 가상화가 묶여서 화학적 격렬한 반응이 생김. 1년에 4천만원짜리 컴퓨터를
+
+1시간만 사용할시 5천원으로 사용할수있음. 그리고 꺼버리면됨.. 꺼버리면 과금이 발생하지 않기 때문..
+
+클라우드 컴퓨팅을 쓰면 1분에서 5분사이에 컴퓨터가 만들어져서 바로 사용 가능. 과거의 컴퓨팅은 세팅시까지 꽤 긴 시간이 걸림..
+
+직접운영 : 컴퓨터 - 운영체제(Linux, Window) - Platform(PHP,MYSQL,Apache) - SOFTWARE(opentutorials) = 하나도 제공하지 않음.
+
+laaS(Infrastructure as a Service) : **컴퓨터 - 운영체제(Linux,windw)** - Platform(PHP,MYSQL,Apache) - SOFTWARE(opentutorials) (아마존 웹서비스, 마소 애저 등) = 운영체제 까지 제공 
+
+Pass(Platform as a Service) : **컴퓨터 - 운영체제(Linux,windw) - Platform(PHP,MYSQL,Apache)** - SOFTWARE(opentutorials)  = Platform 까지 제공 
+
+Saas(Software as a Service) : **컴퓨터 - 운영체제(Linux,windw) - Platform(PHP,MYSQL,Apache) - SOFTWARE(opentutorials)**  = 모두 제공. 
+
+현재는 모두 공존하는..
