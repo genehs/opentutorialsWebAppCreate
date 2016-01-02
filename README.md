@@ -1203,3 +1203,15 @@ http://localhost/path/1.html
 상대 경로 사용시 앞에있는 주소가 바뀌지 않음(우리가 원하는 방식)
 
 localhost로 접속시 localhost/index.html 로 접속되고 index.html 이 없으면 index.php 로 알아서 접속됨..
+
+### 유동 IP와 DDNS
+
+IP고갈 대책 3 
+
+유동 IP(dynamic address) = IP가 변화한다. 가정에서 사용하는 모든 사용자에게 해당되는 일.
+
+통신사도 IP가 한정적이므로 사용하지 않으면 IP를 회수해서 사용함. 유동 IP는 IP가 변해요.
+
+유동 IP를 해결하기 위해 DDNS(Dynamic DNS)가 도입됨. DDNS가 적용된 컴퓨터에는 네임서버에 접속해서 컴퓨터의 IP가 무엇인지 계속해서 가르쳐줌.
+
+사용자는 도메인 주소로 접속하고 DDNS는 도메인과 호스트의 ip를 지속적으로 일치화 시킴. ddns 서비스.
