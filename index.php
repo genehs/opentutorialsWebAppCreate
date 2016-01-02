@@ -21,33 +21,37 @@
              <img src="https://s3-ap-northeast-1.amazonaws.com/opentutorialsfile/course/94.png" alt="생활코딩"/>
              <h1><a href="http://localhost:8000/index.php">JavaScript</a></h1>
         </header>
-        <nav>
-            <ol>
-                <?php     
-                // 연관배열 데이터 형식으로 데이터를 가져옴.
-                while($row = mysqli_fetch_assoc($result)) {
-                    echo '<li><a href="http://localhost:8000/index.php?id='.$row['id'].'">'.htmlspecialchars( $row['title'] ).'</a></li>'."\n";
-                }
-                ?>
-            </ol>
-        </nav>
-        <div id="control">        
-            <input type="button" value="white" onclick="document.getElementById('target').className = 'white'"/>
-            <input type="button" value="black" onclick="document.getElementById('target').className = 'black'"/> 
-            <a href="http://localhost:8000/write.php">쓰기</a>    
+        <div class="row">
+            <nav class="col-md-3">
+                <ol>
+                    <?php     
+                    // 연관배열 데이터 형식으로 데이터를 가져옴.
+                    while($row = mysqli_fetch_assoc($result)) {
+                        echo '<li><a href="http://localhost:8000/index.php?id='.$row['id'].'">'.htmlspecialchars( $row['title'] ).'</a></li>'."\n";
+                    }
+                    ?>
+                </ol>
+            </nav>
+            <div class="col-md-9">
+                <div id="control">        
+                    <input type="button" value="white" onclick="document.getElementById('target').className = 'white'"/>
+                    <input type="button" value="black" onclick="document.getElementById('target').className = 'black'"/> 
+                    <a href="http://localhost:8000/write.php">쓰기</a>    
+                </div>
+                <article>
+                    <?php 
+                    if(empty($_GET['id']) === false) {
+                        $sql = "SELECT topic.id,title,name,description FROM topic LEFT JOIN user ON topic.author = user.id WHERE topic.id=".$_GET['id'];
+                        $result = mysqli_query($conn, $sql);
+                        $row = mysqli_fetch_assoc($result);
+                        echo '<h2>'.htmlspecialchars($row['title']).'</h2>';
+                        echo '<p>'.htmlspecialchars($row['name']).'</p>';
+                        echo strip_tags($row['description'],'<a><h1><h2><h3><h4><h5><ul><ol><li>');
+                    }
+                    ?>
+                </article>
+            </div>
         </div>
-        <article>
-            <?php 
-            if(empty($_GET['id']) === false) {
-                $sql = "SELECT topic.id,title,name,description FROM topic LEFT JOIN user ON topic.author = user.id WHERE topic.id=".$_GET['id'];
-                $result = mysqli_query($conn, $sql);
-                $row = mysqli_fetch_assoc($result);
-                echo '<h2>'.htmlspecialchars($row['title']).'</h2>';
-                echo '<p>'.htmlspecialchars($row['name']).'</p>';
-                echo strip_tags($row['description'],'<a><h1><h2><h3><h4><h5><ul><ol><li>');
-            }
-            ?>
-        </article>
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
