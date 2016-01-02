@@ -1060,3 +1060,7 @@ Getting Started 들어가면 보통 시작점을 제공함. 제일먼저 관심�
 grid 시스템을 제공 (12개로 이루어진..) http://getbootstrap.com/css/#grid-example-basic
 
 그냥 css나 자바스크립트를 써도 되지만 트위터 부트스트랩은 여러가지 편의 기능을 제공함.
+
+이 수업 이해 못해도 다음 수업 못하는거 아니니까 넘겨라.. 모든것을 트위터 부트스트랩으로 할수는 없고 세부적인건 css로 조절.
+
+container = http://getbootstrap.com/css/#overview-container
